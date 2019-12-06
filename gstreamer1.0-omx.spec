@@ -27,7 +27,9 @@ them available as standard GStreamer elements.
 %autopatch -p1
 
 %build
-%meson
+%meson \
+	-Dwith-package-name='OpenMandriva %{name} %{version}-%{release}' \
+	-Dwith-package-origin='%{disturl}'
 %meson_build
 
 %install
