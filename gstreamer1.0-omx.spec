@@ -1,3 +1,5 @@
+%global optflags %{optflags} -O3
+
 Name:           gstreamer1.0-omx
 Version:        1.16.2
 Release:        1
