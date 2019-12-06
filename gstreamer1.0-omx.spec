@@ -29,7 +29,7 @@ them available as standard GStreamer elements.
 	--with-omx-target=generic \
 	--with-package-name='OpenMandriva %{name} package' \
 	--with-package-origin='http://www.openmandriva.org/' \
-%make_build V=1
+%make_build
 
 %install
 %make_install
