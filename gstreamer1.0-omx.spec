@@ -25,8 +25,8 @@ them available as standard GStreamer elements.
 %build
 %configure \
 	--with-omx-target=generic \
-	--with-package-name='%{_vendor} %{name} package' \
-	--with-package-origin='https://www.%{_real_vendor}.org'
+	--with-package-name='OpenMandriva %{name} package' \
+	--with-package-origin='http://www.openmandriva.org/' \
 %make_build V=1
 
 %install
