@@ -1,6 +1,6 @@
 Name:           gstreamer1.0-omx
 Version:        1.16.2
-Release:        %mkrel 1
+Release:        1
 Summary:        GStreamer OpenMAX IL wrapper plugin
 Group:          System/Libraries
 License:        LGPLv2+
@@ -9,7 +9,7 @@ Source0:        https://gstreamer.freedesktop.org/src/gst-omx/gst-omx-%{version}
 BuildRequires:	pkgconfig(gstreamer-plugins-base-1.0)
 BuildRequires:	pkgconfig(glesv2)
 #BuildRequires:	pkgconfig(libomxil-bellagio)
-%ifarch %{valgrind_arches}
+%ifnarch %{riscv}
 BuildRequires:	pkgconfig(valgrind)
 %endif
 Requires:	gstreamer1.0-plugins-base
@@ -23,7 +23,7 @@ them available as standard GStreamer elements.
 %autopatch -p1
 
 %build
-%configure2_5x \
+%configure \
 	--with-omx-target=generic \
 	--with-package-name='%{_vendor} %{name} package' \
 	--with-package-origin='https://www.%{_real_vendor}.org'
