@@ -8,6 +8,8 @@ Group:          System/Libraries
 License:        LGPLv2+
 URL:            https://gstreamer.freedesktop.org/modules/gst-omx.html
 Source0:        https://gstreamer.freedesktop.org/src/gst-omx/gst-omx-%{version}.tar.xz
+
+BuildRequires:	meson
 BuildRequires:	pkgconfig(gstreamer-plugins-base-1.0)
 BuildRequires:	pkgconfig(glesv2)
 #BuildRequires:	pkgconfig(libomxil-bellagio)
@@ -25,14 +27,11 @@ them available as standard GStreamer elements.
 %autopatch -p1
 
 %build
-%configure \
-	--with-omx-target=generic \
-	--with-package-name='OpenMandriva %{name} package' \
-	--with-package-origin='http://www.openmandriva.org/' \
-%make_build
+%meson
+%meson_build
 
 %install
-%make_install
+%meson_install
 
 # drop plugin docs
 rm -rf %{buildroot}/%{_datadir}/gtk-doc/
