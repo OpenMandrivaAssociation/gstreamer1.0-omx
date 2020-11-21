@@ -28,6 +28,7 @@ them available as standard GStreamer elements.
 
 %build
 %meson \
+	-Dtarget=none \
 	-Ddoc=disabled \
 	--buildtype=release
 	-Dwith-package-name='OpenMandriva %{name} %{version}-%{release}' \
