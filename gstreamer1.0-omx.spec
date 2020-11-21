@@ -30,8 +30,8 @@ them available as standard GStreamer elements.
 %meson \
 	-Dtarget='generic' \
 	-Ddoc=disabled \
-	--buildtype=release
-	-Dpackage-name='%{_vendor} %{name} package' \
+	--buildtype=release \
+	-Dwith-package-name='OpenMandriva %{name} %{version}-%{release}' \
 	-Dwith-package-origin='%{disturl}'
 %meson_build
 
