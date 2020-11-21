@@ -1,7 +1,7 @@
 %global optflags %{optflags} -O3
 
 Name:           gstreamer1.0-omx
-Version:        1.16.2
+Version:        1.18.1
 Release:        1
 Summary:        GStreamer OpenMAX IL wrapper plugin
 Group:          System/Libraries
@@ -29,6 +29,8 @@ them available as standard GStreamer elements.
 %build
 %meson \
 	-Dtarget-generic \
+	-Ddoc=disabled \
+	--buildtype=release
 	-Dwith-package-name='OpenMandriva %{name} %{version}-%{release}' \
 	-Dwith-package-origin='%{disturl}'
 %meson_build
