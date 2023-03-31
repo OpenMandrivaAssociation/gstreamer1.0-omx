@@ -2,7 +2,7 @@
 
 Name:           gstreamer1.0-omx
 Version:        1.22.1
-Release:        1
+Release:        2
 Summary:        GStreamer OpenMAX IL wrapper plugin
 Group:          System/Libraries
 License:        LGPLv2+
