@@ -1,7 +1,7 @@
 %global optflags %{optflags} -O3
 
 Name:           gstreamer1.0-omx
-Version:        1.22.9
+Version:        1.22.10
 Release:        1
 Summary:        GStreamer OpenMAX IL wrapper plugin
 Group:          System/Libraries
